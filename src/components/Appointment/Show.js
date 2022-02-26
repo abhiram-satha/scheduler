@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function Empty(props) {
 
-  const {student, interviewer, onEdit, onDelete} = props;
+  const { student, interviewer, onEdit, onDelete} = props;
+
 
 return (
   <main className="appointment__card appointment__card--show">
