@@ -5,7 +5,6 @@ export default function DayList(props) {
 
   const {days, value, onChange} = props;
 
-  
   const dayofWeek = days.map(day=> 
     <DayListItem
       key = {day.id}
