@@ -13,6 +13,20 @@ export function getAppointmentsForDay(state, day) {
   return appointmentArray;
 }
 
+export function getInterviewersForDay(state, day) { 
+  const filteredDates = state.days.filter(weekday => weekday.name === day)
+  if (filteredDates.length === 0) {
+    return [];
+  }
+  // console.log(filteredDates)
+  const interview = filteredDates[0].interviewers;
+  const interviewArray = [];
+
+  interview.map(interviewID => interviewArray.push(state.interviewers[interviewID]))
+
+  // console.log(appointmentArray)
+  return interviewArray;
+}
 
 export function getInterview(state, interview) {
 

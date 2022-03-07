@@ -18,7 +18,6 @@ export default function useVisualMode(initial) {
     }
   }
   
-  //check the length of history before slicing
   function back() {
     if (history.length > 1) {
 
@@ -30,8 +29,6 @@ export default function useVisualMode(initial) {
     }
   }
 
-
-  //useMemo, useCallback, useReducer 
   return {
     mode: history[history.length - 1],
     transition,
