@@ -87,7 +87,7 @@ function onEdit(id, name, interviewers) {
         />
 )}
 {mode === ERROR_DELETE && <Error message="Could not delete appointment" onClose={()=>back(CONFIRM)}/>}
-{mode === ERROR_SAVE && <Error message="Could not save appointment" onClose={()=>back(EMPTY)}/>}
+{mode === ERROR_SAVE && <Error message="Could not save appointment" onClose={()=>back(CONFIRM)}/>}
 {mode === SAVING && <Status message="Saving"/>}
 {mode === DELETING && <Status message="Deleting"/>}
 {mode === EDIT && <Form

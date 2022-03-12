@@ -60,7 +60,7 @@ function useApplicationData() {
     };
    
     if (!interview.interviewer) {
-      return Promise.reject();
+      throw Error;
     } else {
       return axios
         .put(`/api/appointments/${id}`, { interview })
