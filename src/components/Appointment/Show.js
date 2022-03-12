@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Empty(props) {
+export default function Show(props) {
 
-  const { student, interviewer, onEdit, onDelete} = props;
+  const { id, student, interviewer, onEdit, onDelete} = props;
 
 
 return (
@@ -20,13 +20,13 @@ return (
         className="appointment__actions-button"
         src="images/edit.png"
         alt="Edit"
-        onClick = {onEdit}
+        onClick = {()=>onEdit(id, student, interviewer)}
       />
       <img
         className="appointment__actions-button"
         src="images/trash.png"
         alt="Delete"
-        onClick={onDelete}
+        onClick={()=>onDelete()}
       />
     </section>
   </section>
