@@ -39,8 +39,6 @@ function save(name, interviewer) {
     student: name,
     interviewer
   };
-  // console.log(interview)
-  // console.log('this is the index',id);
 
     bookInterview(id, interview)
     .then(()=> transition(SHOW))
@@ -60,13 +58,11 @@ function onDelete() {
 }
 
 function onEdit(id, name, interviewers) {
-  // console.log({id, name, interviewers})
   transition(EDIT)
   const interview = {
     student: name,
     interviewers
   };
-  // console.log(interview.interviewer)
   bookInterview(id, interview)
     .then(()=> transition(SHOW))
     .catch((error)=> transition(ERROR_SAVE, true))

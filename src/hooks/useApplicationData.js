@@ -27,9 +27,6 @@ function useApplicationData() {
           interviewers: response[2].data,
         }));
       })
-      .catch((error) => {
-        console.log(error);
-      });
   }, []);
 
   
@@ -38,7 +35,6 @@ function useApplicationData() {
     for(const dayOfWeek of state.days) {
       if(dayOfWeek.name === day) {
         const spotsAvailable = dayOfWeek.spots;
-        console.log(spotsAvailable)
         return spotsAvailable
       }
     }
@@ -74,14 +70,12 @@ function useApplicationData() {
                 let newDaysState = reminaingSpots.days.map(day => day.id === newDays.id ? {...day, spots: newDay} : day)
                 
                 const newState = {...prev, days: newDaysState, appointments}
-                console.log(newState)
                 return newState
 
 
               }
 
             }
-            // console.log(state)
           })
         }
          
@@ -110,14 +104,12 @@ function useApplicationData() {
               let newDaysState = reminaingSpots.days.map(day => day.id === newDays.id ? {...day, spots: newDay} : day)
               
               const newState = {...prev, days: newDaysState, appointments}
-              console.log(newState)
               return newState
 
 
             }
 
           }
-          // console.log(state)
         })
       });
   }
